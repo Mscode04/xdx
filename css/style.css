@@ -155,7 +155,7 @@ a {
    
     z-index: 1000;
     transition: all 0.3s ease;
-    background: rgba(15, 16, 33, 0.8);
+    background: transparent;
     backdrop-filter: blur(10px);
     --underline-height: 3px;
     --underline-active: var(--secondary-color);
@@ -163,7 +163,7 @@ a {
 
 .navbar.scrolled {
     padding: 15px 0;
-    background: rgba(15, 16, 33, 0.95);
+    background: #0f0f0fc5;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     
 }

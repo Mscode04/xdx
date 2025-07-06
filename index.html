@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuraq Technologies | Make Your Online Identity</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <video autoplay muted loop class="loading-video">
+            <source src="assets/videos/loading-bg.mp4" type="video/mp4">
+        </video>
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-part">Neuraq</span>
+                <span class="logo-part">Technologies</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="tech-grid-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container d-flex flex-row" style="display: flex; justify-content: space-between">
+                <a href="#" class="logo">
+                  <img src="assets/images/logo.png" alt=""  class="logo" style="width: 150px;">
+                </a>
+                <div class="nav-links">
+                    <div class="nav-item">
+                        <a href="#home" class="nav-link active">
+                            <span class="link-text">Home</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">About</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">Care</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">Innovations</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#contact" class="nav-link cta-button">
+                            <span class="link-text" style="color: black;">Contact</span>
+                            <div class="link-hover-state"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <div class="menu-icon">
+                        <span class="menu-line top"></span>
+                        <span class="menu-line middle"></span>
+                        <span class="menu-line bottom"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-tech-overlay">
+                <div class="circuit-lines"></div>
+                <div class="floating-tech-elements">
+                    <div class="tech-orb"></div>
+                    <div class="tech-orb"></div>
+                    <div class="tech-orb"></div>
+                </div>
+            </div>
+        </nav>
+
+      <!-- Hero Section -->
+<section class="cyber-hero">
+  <!-- Holographic Interface -->
+  <div class="holographic-interface">
+    <div class="holographic-grid"></div>
+    <div class="holographic-line line-1"></div>
+    <div class="holographic-line line-2"></div>
+    <div class="holographic-line line-3"></div>
+    <div class="holographic-node node-1"></div>
+    <div class="holographic-node node-2"></div>
+    <div class="holographic-node node-3"></div>
+  </div>
+  
+  <!-- Quantum Particles -->
+  <div class="quantum-particles" id="quantum-particles"></div>
+  
+  <!-- Main Content -->
+  <div class="cyber-content">
+    <div class="cyber-text">
+      <h1 class="cyber-title glitch" data-text="TECH">
+          <span class="title-line">TECH</span>
+        <span class="title-line">NEURAQ</span>
+      </h1>
+      <p class="cyber-subtitle">Redefining the boundaries of artificial intelligence and neural interfaces</p>
+      <div class="cyber-cta">
+        <button class="cyber-btn primary">
+          <span class="btn-text">Initiate Connection</span>
+          <div class="btn-hover"></div>
+          <div class="btn-sparkles"></div>
+        </button>
+        <button class="cyber-btn secondary">
+          <span class="btn-text">Explore Network</span>
+          <div class="btn-hover"></div>
+          <div class="btn-sparkles"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- Data Stream -->
+  <div class="data-stream">
+    <div class="stream-line"></div>
+    <div class="stream-line"></div>
+    <div class="stream-line"></div>
+  </div>
+  
+  <!-- Cyber Scroll Indicator -->
+  <div class="cyber-scroll">
+    <div class="scroll-arrow"></div>
+    <div class="scroll-pulse"></div>
+  </div>
+</section>
+
+<!-- Required Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+       <!-- Research Section -->
+<section id="research" class="research-section">
+    <div class="research-background" data-parallax="scroll" data-image-src="assets/images/research-bg.jpg"></div>
+    <div class="research-tech-overlay">
+        <div class="circuit-node"></div>
+        <div class="circuit-node"></div>
+        <div class="circuit-node"></div>
+    </div>
+    <div class="container">
+        <div class="research-content">
+            <div class="research-image" data-scroll>
+                <div class="image-container">
+                    <div class="glow-effect"></div>
+                    <div class="tech-grid-lines"></div>
+                    <img src="assets/images/research-main.jpg" alt="Neuraq Research Lab">
+                </div>
+            </div>
+            <div class="research-text" data-scroll>
+                <h2 class="section-title">Pioneering Research</h2>
+                <p>At Neuraq Technologies, we're pushing the boundaries of digital identity through cutting-edge research in artificial intelligence, neuroscience, and quantum computing.</p>
+                
+                <div class="research-highlights">
+                    <div class="research-item">
+                        <div class="research-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="research-detail">
+                            <h3>Neural Authentication</h3>
+                            <p>Developing brainwave pattern recognition for seamless, secure authentication.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="research-item">
+                        <div class="research-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <div class="research-detail">
+                            <h3>Quantum Encryption</h3>
+                            <p>Building unhackable communication protocols using quantum principles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="research-item">
+                        <div class="research-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <div class="research-detail">
+                            <h3>Biometric Fusion</h3>
+                            <p>Combining multiple biometric markers for unprecedented accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="research-cta">
+                    <a href="#" class="tech-button primary">
+                        <span class="button-text">View Research Papers</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12H19M12 5L19 12L12 19"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#" class="tech-button secondary">
+                        <span class="button-text">Meet Our Researchers</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 6V12M12 12V18M12 12H18M12 12H6"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="research-tech-background">
+        <div class="binary-code">
+            <span>01010010 01100101 01110011 01100101 01100001 01110010 01100011 01101000 00100000 00100026 00100000 01000100 01100101 01110110 01100101 01101100 01101111 01110000 01101101 01100101 01101110 01110100</span>
+        </div>
+    </div>
+</section>
+
+<!-- About Section (Image on Right) -->
+<section id="about" class="about-section">
+    <div class="about-tech-overlay">
+        <div class="circuit-line horizontal"></div>
+        <div class="circuit-line vertical"></div>
+        <div class="circuit-node pulse-1"></div>
+        <div class="circuit-node pulse-2"></div>
+        <div class="circuit-node pulse-3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text" data-scroll>
+                <div class="section-tag">
+                    <span>About Us</span>
+                </div>
+                <h2 class="section-title">Redefining Digital Identity</h2>
+                <p class="lead-text">At Neuraq Technologies, we're pioneering the future of secure, seamless digital identity solutions through cutting-edge neuroscience and artificial intelligence.</p>
+                
+                <div class="about-details">
+                    <p>Founded in 2020 by a team of MIT researchers, we've grown to become the leading innovator in biometric authentication technologies. Our patented neural recognition algorithms are setting new standards for security and user experience.</p>
+                    
+                    <div class="key-metrics">
+                        <div class="metric-item">
+                            <div class="metric-value" data-count="150">0</div>
+                            <div class="metric-label">World-Class Experts</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value" data-count="42">0</div>
+                            <div class="metric-label">Patents Filed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="core-values">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="value-content">
+                                <h3>Uncompromising Security</h3>
+                                <p>Military-grade encryption and zero-trust architecture built into every solution.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="value-content">
+                                <h3>Neural Innovation</h3>
+                                <p>Proprietary algorithms that learn and adapt to user behavior patterns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-cta">
+                    <a href="#" class="tech-button primary">
+                        <span class="button-text">View Our Brand Story</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12H19M12 5L19 12L12 19"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#" class="tech-button secondary">
+                        <span class="button-text">Meet The Team</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="about-image" data-scroll>
+                <div class="image-frame">
+                    <div class="image-container">
+                        <img src="assets/images/about-tech.jpg" alt="Neuraq Technologies Lab">
+                        <div class="image-overlay">
+                            <div class="tech-grid-overlay"></div>
+                            <div class="glow-effect"></div>
+                        </div>
+                    </div>
+                    <div class="frame-decoration top-left"></div>
+                    <div class="frame-decoration top-right"></div>
+                    <div class="frame-decoration bottom-left"></div>
+                    <div class="frame-decoration bottom-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="about-tech-background">
+        <div class="binary-stream">
+            <span>01001110 01100101 01110101 01110010 01100001 01110001 00100000 01010100 01100101 01100011 01101000 01101110 01101111 01101100 01101111 01100111 01101001 01100101 01110011</span>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="blog-section">
+    <div class="container">
+        <div class="section-header" data-scroll>
+            <h2 class="section-title">Latest Insights</h2>
+            <p class="section-subtitle">Discover our cutting-edge research and industry trends</p>
+        </div>
+        
+        <div class="blog-carousel">
+            <div class="carousel-container">
+                <!-- Blog Item 1 -->
+                <div class="blog-card" data-scroll>
+                    <div class="blog-image-carousel">
+                        <div class="carousel-slides">
+                            <div class="slide active" style="background-image: url('assets/images/blog1-1.jpg')"></div>
+                            <div class="slide" style="background-image: url('assets/images/blog1-2.jpg')"></div>
+                            <div class="slide" style="background-image: url('assets/images/blog1-3.jpg')"></div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                            <div class="carousel-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Technology</span>
+                            <span class="blog-date">June 15, 2023</span>
+                        </div>
+                        <h3 class="blog-title">The Future of Digital Identity Verification</h3>
+                        <p class="blog-excerpt">Exploring how neural networks are revolutionizing online identity verification processes with unprecedented accuracy.</p>
+                        <a href="#" class="tech-button small">
+                            <span class="button-text">Read More</span>
+                            <span class="button-hover"></span>
+                            <span class="button-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12H19M12 5L19 12L12 19"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="blog-tech-overlay">
+                        <div class="circuit-node"></div>
+                    </div>
+                </div>
+                
+                <!-- Blog Item 2 -->
+                <div class="blog-card" data-scroll>
+                    <div class="blog-image-carousel">
+                        <div class="carousel-slides">
+                            <div class="slide active" style="background-image: url('assets/images/blog2-1.jpg')"></div>
+                            <div class="slide" style="background-image: url('assets/images/blog2-2.jpg')"></div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                            <div class="carousel-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Security</span>
+                            <span class="blog-date">May 28, 2023</span>
+                        </div>
+                        <h3 class="blog-title">Quantum Encryption: The Unhackable Future</h3>
+                        <p class="blog-excerpt">How quantum encryption is setting new standards for data security and what it means for your digital identity.</p>
+                        <a href="#" class="tech-button small">
+                            <span class="button-text">Read More</span>
+                            <span class="button-hover"></span>
+                            <span class="button-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12H19M12 5L19 12L12 19"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="blog-tech-overlay">
+                        <div class="circuit-node"></div>
+                    </div>
+                </div>
+                
+                <!-- Blog Item 3 -->
+                <div class="blog-card" data-scroll>
+                    <div class="blog-image-carousel">
+                        <div class="carousel-slides">
+                            <div class="slide active" style="background-image: url('assets/images/blog3-1.jpg')"></div>
+                            <div class="slide" style="background-image: url('assets/images/blog3-2.jpg')"></div>
+                            <div class="slide" style="background-image: url('assets/images/blog3-3.jpg')"></div>
+                            <div class="slide" style="background-image: url('assets/images/blog3-4.jpg')"></div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                            <div class="carousel-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Innovation</span>
+                            <span class="blog-date">April 10, 2023</span>
+                        </div>
+                        <h3 class="blog-title">Biometric Authentication in Everyday Life</h3>
+                        <p class="blog-excerpt">From smartphones to smart homes - how biometric authentication is becoming ubiquitous in our daily routines.</p>
+                        <a href="#" class="tech-button small">
+                            <span class="button-text">Read More</span>
+                            <span class="button-hover"></span>
+                            <span class="button-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12H19M12 5L19 12L12 19"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="blog-tech-overlay">
+                        <div class="circuit-node"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-nav">
+                <button class="carousel-nav-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-nav-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        
+        <div class="view-all-container">
+            <a href="#" class="tech-button">
+                <span class="button-text">View All Articles</span>
+                <span class="button-hover"></span>
+                <span class="button-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 12H19M12 5L19 12L12 19"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="blog-tech-background">
+        <div class="binary-code">
+            <span>01000010 01101100 01101111 01100111 00100000 01010000 01101111 01110011 01110100 01110011</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Products & Projects Section -->
+<section id="products" class="products-section">
+    <div class="container">
+        <div class="section-header" data-scroll>
+            <h2 class="section-title">Our Innovations</h2>
+            <p class="section-subtitle">Cutting-edge solutions transforming digital identity</p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-scroll>
+                <div class="product-image">
+                    <img src="assets/images/product1.jpg" alt="Neuraq ID">
+                    <div class="product-badge">Featured</div>
+                    <div class="product-overlay">
+                        <div class="tech-grid-overlay"></div>
+                        <div class="hover-content">
+                            <h3 class="product-title">Neuraq ID</h3>
+                            <p class="product-description">Biometric authentication powered by neural networks</p>
+                            <div class="product-tech">
+                                <span>AI</span>
+                                <span>Biometrics</span>
+                                <span>Blockchain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h3>Neuraq ID</h3>
+                    <p>Next-generation digital identity verification</p>
+                    <a href="#" class="tech-button small">
+                        <span class="button-text">View Details</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12H19M12 5L19 12L12 19"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="product-tech-overlay">
+                    <div class="circuit-node"></div>
+                    <div class="circuit-node"></div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card" data-scroll>
+                <div class="product-image">
+                    <img src="assets/images/product2.jpg" alt="Quantum Vault">
+                    <div class="product-overlay">
+                        <div class="tech-grid-overlay"></div>
+                        <div class="hover-content">
+                            <h3 class="product-title">Quantum Vault</h3>
+                            <p class="product-description">Unbreakable encryption for sensitive data</p>
+                            <div class="product-tech">
+                                <span>Quantum</span>
+                                <span>Encryption</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h3>Quantum Vault</h3>
+                    <p>Post-quantum cryptographic storage</p>
+                    <a href="#" class="tech-button small">
+                        <span class="button-text">View Details</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12H19M12 5L19 12L12 19"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="product-tech-overlay">
+                    <div class="circuit-node"></div>
+                    <div class="circuit-node"></div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card" data-scroll>
+                <div class="product-image">
+                    <img src="assets/images/product3.jpg" alt="NeuroAuth">
+                    <div class="product-badge">New</div>
+                    <div class="product-overlay">
+                        <div class="tech-grid-overlay"></div>
+                        <div class="hover-content">
+                            <h3 class="product-title">NeuroAuth</h3>
+                            <p class="product-description">Brainwave pattern authentication</p>
+                            <div class="product-tech">
+                                <span>Neuroscience</span>
+                                <span>AI</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h3>NeuroAuth</h3>
+                    <p>Thought-based authentication system</p>
+                    <a href="#" class="tech-button small">
+                        <span class="button-text">View Details</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12H19M12 5L19 12L12 19"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="product-tech-overlay">
+                    <div class="circuit-node"></div>
+                    <div class="circuit-node"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-all-container">
+            <a href="#" class="tech-button">
+                <span class="button-text">View All Products</span>
+                <span class="button-hover"></span>
+                <span class="button-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 12H19M12 5L19 12L12 19"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="products-tech-background">
+        <div class="binary-code">
+            <span>01010000 01110010 01101111 01100100 01110101 01100011 01110100 01110011 00100000 00100110 00100000 01010000 01110010 01101111 01101010 01100101 01100011 01110100 01110011</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- Team Section -->
+<section id="team" class="team-section">
+    <div class="container">
+        <div class="section-header" data-scroll>
+            <h2 class="section-title">Our Visionaries</h2>
+            <p class="section-subtitle">The brilliant minds shaping the future of digital identity</p>
+        </div>
+        
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card" data-scroll>
+                <div class="team-image">
+                    <div class="image-wrapper">
+                        <img src="assets/images/team1.jpg" alt="Dr. Elena Rodriguez">
+                        <div class="tech-grid-overlay"></div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">Dr. Elena Rodriguez</h3>
+                    <p class="team-title">Chief Executive Officer</p>
+                    <div class="team-bio">
+                        <p>Neuroscience pioneer with 15+ years in AI research. Former head of MIT's Digital Identity Lab.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Neuroscience</span>
+                        <span class="tech-tag">Security</span>
+                    </div>
+                </div>
+                <div class="team-tech-overlay">
+                    <div class="circuit-node"></div>
+                    <div class="circuit-node"></div>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="team-card" data-scroll>
+                <div class="team-image">
+                    <div class="image-wrapper">
+                        <img src="assets/images/team2.jpg" alt="James Chen">
+                        <div class="tech-grid-overlay"></div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">James Chen</h3>
+                    <p class="team-title">Chief Technology Officer</p>
+                    <div class="team-bio">
+                        <p>Quantum computing expert. Developed first commercial quantum encryption protocol.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Quantum</span>
+                        <span class="tech-tag">Encryption</span>
+                        <span class="tech-tag">Blockchain</span>
+                    </div>
+                </div>
+                <div class="team-tech-overlay">
+                    <div class="circuit-node"></div>
+                    <div class="circuit-node"></div>
+                </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="team-card" data-scroll>
+                <div class="team-image">
+                    <div class="image-wrapper">
+                        <img src="assets/images/team3.jpg" alt="Sarah Johnson">
+                        <div class="tech-grid-overlay"></div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">Sarah Johnson</h3>
+                    <p class="team-title">VP of Product</p>
+                    <div class="team-bio">
+                        <p>Human-computer interaction specialist. Leads UX for our identity verification systems.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">UX</span>
+                        <span class="tech-tag">Biometrics</span>
+                        <span class="tech-tag">HCI</span>
+                    </div>
+                </div>
+                <div class="team-tech-overlay">
+                    <div class="circuit-node"></div>
+                    <div class="circuit-node"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-all-container">
+            <a href="#" class="tech-button">
+                <span class="button-text">Meet the Full Team</span>
+                <span class="button-hover"></span>
+                <span class="button-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 12H19M12 5L19 12L12 19"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="team-tech-background">
+        <div class="binary-code">
+            <span>01010100 01100101 01100001 01101101 00100000 01001110 01100101 01110101 01110010 01100001 01110001</span>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+        <div class="section-header" data-scroll>
+            <h2 class="section-title">Trusted by Innovators</h2>
+            <p class="section-subtitle">What industry leaders say about our solutions</p>
+        </div>
+        
+        <div class="testimonials-carousel">
+            <div class="carousel-track">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-scroll>
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" class="quote-icon">
+                            <path d="M7 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                        </svg>
+                        <p class="quote-text">Neuraq's identity platform reduced our authentication time by 78% while improving security. Their neural network approach is revolutionary.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="assets/images/testimonial1.jpg" alt="Sarah Johnson">
+                            <div class="tech-grid-overlay"></div>
+                        </div>
+                        <div class="author-details">
+                            <h4 class="author-name">Sarah Johnson</h4>
+                            <p class="author-title">CTO, TechSecure Inc.</p>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-tech-overlay">
+                        <div class="circuit-node"></div>
+                        <div class="circuit-node"></div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-scroll>
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" class="quote-icon">
+                            <path d="M7 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                        </svg>
+                        <p class="quote-text">Implementing Quantum Vault transformed our data security. The encryption is truly unhackable - we've stress-tested it extensively.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="assets/images/testimonial2.jpg" alt="Michael Chen">
+                            <div class="tech-grid-overlay"></div>
+                        </div>
+                        <div class="author-details">
+                            <h4 class="author-name">Michael Chen</h4>
+                            <p class="author-title">Director of Security, Finova</p>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-tech-overlay">
+                        <div class="circuit-node"></div>
+                        <div class="circuit-node"></div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-scroll>
+                    <div class="testimonial-quote">
+                        <svg viewBox="0 0 24 24" class="quote-icon">
+                            <path d="M7 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                        </svg>
+                        <p class="quote-text">The accuracy of their biometric authentication is unmatched. We've seen zero false positives since deployment six months ago.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="assets/images/testimonial3.jpg" alt="David Rodriguez">
+                            <div class="tech-grid-overlay"></div>
+                        </div>
+                        <div class="author-details">
+                            <h4 class="author-name">David Rodriguez</h4>
+                            <p class="author-title">Head of Product, Veritas Systems</p>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-tech-overlay">
+                        <div class="circuit-node"></div>
+                        <div class="circuit-node"></div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+ 
+        </div>
+    </div>
+    <div class="testimonials-tech-background">
+        <div class="binary-code">
+            <span>01010100 01100101 01110011 01110100 01101001 01101101 01101111 01101110 01101001 01100001 01101100 01110011</span>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Partners Section -->
+<section id="partners" class="partners-section">
+    <div class="container">
+        <div class="section-header" data-scroll>
+            <h2 class="section-title">Our Partners</h2>
+            <p class="section-subtitle">Trusted by industry leaders</p>
+        </div>
+        
+        <div class="partners-slider">
+            <div class="partners-track">
+                <!-- First Set -->
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner1.png" alt="Partner 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner2.png" alt="Partner 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner3.png" alt="Partner 3">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner4.png" alt="Partner 4">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner5.png" alt="Partner 5">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner6.png" alt="Partner 6">
+                </div>
+                
+                <!-- Duplicate Set for seamless looping -->
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner1.png" alt="Partner 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner2.png" alt="Partner 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner3.png" alt="Partner 3">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner4.png" alt="Partner 4">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner5.png" alt="Partner 5">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/partners/partner6.png" alt="Partner 6">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                           <img src="assets/images/logo.png" alt=""  class="logo" style="width: 150px;">
+                        <p class="slogan">Make your online identity</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="links-column">
+                            <h4>Company</h4>
+                            <a href="#">About Us</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Press</a>
+                        </div>
+                        <div class="links-column">
+                            <h4>Products</h4>
+                            <a href="#">Neuraq ID</a>
+                            <a href="#">Security Suite</a>
+                            <a href="#">API Solutions</a>
+                            <a href="#">Pricing</a>
+                        </div>
+                        <div class="links-column">
+                            <h4>Resources</h4>
+                            <a href="#">Documentation</a>
+                            <a href="#">Guides</a>
+                            <a href="#">Support</a>
+                            <a href="#">Community</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Neuraq Technologies. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-tech-overlay">
+                <div class="binary-code">
+                    <span>01001110 01100101 01110101 01110010 01100001 01110001 00100000 01010100 01100101 01100011 01101000 01101110 01101111 01101100 01101111 01100111 01101001 01100101 01110011</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrollEffects.js"></script>
+</body>
+</html>

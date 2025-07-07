@@ -13,22 +13,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Loading Screen -->
+    <!-- Fullscreen Loading Animation -->
     <div class="loading-screen">
-        <video autoplay muted loop class="loading-video">
-            <source src="assets/videos/loading-bg.mp4" type="video/mp4">
-        </video>
-        <div class="loading-content">
-            <div class="loading-logo">
-                <span class="logo-part">Neuraq</span>
-                <span class="logo-part">Technologies</span>
-            </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-            <div class="tech-grid-overlay"></div>
-        </div>
+        <!-- Replace with your preferred GIF -->
+        <img src="https://cdn.dribbble.com/userupload/22537470/file/original-b4ec93a271c77576adc513e043c267e5.gif" 
+             alt="Loading..." 
+             class="loading-gif">
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingScreen = document.querySelector('.loading-screen');
+            
+            // Hide loading screen after delay (simulate loading)
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500); // Match this with CSS transition time
+            }, 3000); // 3 seconds loading time - adjust as needed
+        });
+    </script>
 
     <!-- Main Content -->
     <div class="main-content">
@@ -331,146 +336,82 @@
     </div>
 </section>
 
-<!-- Blog Section -->
-<section id="blog" class="blog-section">
+
+<!-- Newspaper-Style Blog Section -->
+<section id="blog" class="newspaper-blog-section">
     <div class="container">
         <div class="section-header" data-scroll>
-            <h2 class="section-title">Latest Insights</h2>
-            <p class="section-subtitle">Discover our cutting-edge research and industry trends</p>
+            <h2 class="section-title">Neuraq Insights</h2>
+            <p class="section-subtitle">Cutting-edge research and industry analysis from our experts</p>
         </div>
         
-        <div class="blog-carousel">
-            <div class="carousel-container">
-                <!-- Blog Item 1 -->
-                <div class="blog-card" data-scroll>
-                    <div class="blog-image-carousel">
-                        <div class="carousel-slides">
-                            <div class="slide active" style="background-image: url('assets/images/blog1-1.jpg')"></div>
-                            <div class="slide" style="background-image: url('assets/images/blog1-2.jpg')"></div>
-                            <div class="slide" style="background-image: url('assets/images/blog1-3.jpg')"></div>
-                        </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-                            <div class="carousel-dots">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
-                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
-                        </div>
+        <div class="newspaper-grid">
+            <!-- Featured Blog Post 1 -->
+            <article class="featured-post" data-scroll>
+                <div class="post-header">
+                    <div class="post-meta">
+                        <span class="post-category">AI Research</span>
+                        <span class="post-date">July 5, 2023</span>
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">Technology</span>
-                            <span class="blog-date">June 15, 2023</span>
-                        </div>
-                        <h3 class="blog-title">The Future of Digital Identity Verification</h3>
-                        <p class="blog-excerpt">Exploring how neural networks are revolutionizing online identity verification processes with unprecedented accuracy.</p>
-                        <a href="#" class="tech-button small">
-                            <span class="button-text">Read More</span>
-                            <span class="button-hover"></span>
-                            <span class="button-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M5 12H19M12 5L19 12L12 19"/>
-                                </svg>
-                            </span>
-                        </a>
+                    <h3 class="post-title">Neural Networks in Identity Verification: The Next Frontier</h3>
+                    <p class="post-excerpt">How deep learning models are achieving unprecedented accuracy in biometric authentication systems.</p>
+                </div>
+                
+                <div class="post-image-carousel">
+                    <div class="carousel-slides">
+                        <div class="slide active" style="background-image: url('assets/images/1.jpg')"></div>
+                        <div class="slide" style="background-image: url('assets/images/2.jpg')"></div>
+                        <div class="slide" style="background-image: url('assets/images/3.jpg')"></div>
                     </div>
-                    <div class="blog-tech-overlay">
-                        <div class="circuit-node"></div>
+                    <div class="carousel-controls">
+                        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
                 
-                <!-- Blog Item 2 -->
-                <div class="blog-card" data-scroll>
-                    <div class="blog-image-carousel">
-                        <div class="carousel-slides">
-                            <div class="slide active" style="background-image: url('assets/images/blog2-1.jpg')"></div>
-                            <div class="slide" style="background-image: url('assets/images/blog2-2.jpg')"></div>
-                        </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-                            <div class="carousel-dots">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                            </div>
-                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="post-content">
+                    <p>Our latest research demonstrates how convolutional neural networks can achieve 99.8% accuracy in facial recognition tasks, even with partial obstructions or low-light conditions. This breakthrough has significant implications for security systems worldwide.</p>
+                    <p>The model architecture incorporates novel attention mechanisms that focus on the most discriminative facial features while ignoring variable elements like hairstyles or accessories. Early deployments in airport security show a 40% reduction in false positives compared to traditional systems.</p>
+                    <a href="#" class="tech-button">
+                        <span class="button-text">Continue Reading</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12H19M12 5L19 12L12 19"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="post-footer">
+                    <div class="author-info">
+                        <div class="author-avatar" style="background-image: url('assets/images/team/dr-smith.jpg')"></div>
+                        <div class="author-details">
+                            <span class="author-name">Dr. Sarah Smith</span>
+                            <span class="author-title">Chief AI Researcher</span>
                         </div>
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">Security</span>
-                            <span class="blog-date">May 28, 2023</span>
-                        </div>
-                        <h3 class="blog-title">Quantum Encryption: The Unhackable Future</h3>
-                        <p class="blog-excerpt">How quantum encryption is setting new standards for data security and what it means for your digital identity.</p>
-                        <a href="#" class="tech-button small">
-                            <span class="button-text">Read More</span>
-                            <span class="button-hover"></span>
-                            <span class="button-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M5 12H19M12 5L19 12L12 19"/>
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="blog-tech-overlay">
-                        <div class="circuit-node"></div>
+                    <div class="post-stats">
+                        <span class="reading-time">8 min read</span>
                     </div>
                 </div>
                 
-                <!-- Blog Item 3 -->
-                <div class="blog-card" data-scroll>
-                    <div class="blog-image-carousel">
-                        <div class="carousel-slides">
-                            <div class="slide active" style="background-image: url('assets/images/blog3-1.jpg')"></div>
-                            <div class="slide" style="background-image: url('assets/images/blog3-2.jpg')"></div>
-                            <div class="slide" style="background-image: url('assets/images/blog3-3.jpg')"></div>
-                            <div class="slide" style="background-image: url('assets/images/blog3-4.jpg')"></div>
-                        </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-                            <div class="carousel-dots">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
-                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-category">Innovation</span>
-                            <span class="blog-date">April 10, 2023</span>
-                        </div>
-                        <h3 class="blog-title">Biometric Authentication in Everyday Life</h3>
-                        <p class="blog-excerpt">From smartphones to smart homes - how biometric authentication is becoming ubiquitous in our daily routines.</p>
-                        <a href="#" class="tech-button small">
-                            <span class="button-text">Read More</span>
-                            <span class="button-hover"></span>
-                            <span class="button-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M5 12H19M12 5L19 12L12 19"/>
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="blog-tech-overlay">
-                        <div class="circuit-node"></div>
-                    </div>
+                <div class="tech-overlay">
+                    <div class="circuit-line horizontal"></div>
+                    <div class="circuit-line vertical"></div>
+                
                 </div>
-            </div>
-            
-            <div class="carousel-nav">
-                <button class="carousel-nav-prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="carousel-nav-next"><i class="fas fa-chevron-right"></i></button>
-            </div>
+            </article>
         </div>
         
         <div class="view-all-container">
-            <a href="#" class="tech-button">
-                <span class="button-text">View All Articles</span>
+            <a href="#" class="tech-button outline">
+                <span class="button-text">Browse All Articles</span>
                 <span class="button-hover"></span>
                 <span class="button-icon">
                     <svg viewBox="0 0 24 24">
@@ -480,17 +421,106 @@
             </a>
         </div>
     </div>
-    <div class="blog-tech-background">
-        <div class="binary-code">
-            <span>01000010 01101100 01101111 01100111 00100000 01010000 01101111 01110011 01110100 01110011</span>
-        </div>
+    
+    <div class="tech-background-elements">
+        <div class="binary-stream"></div>
+        <div class="grid-overlay"></div>
     </div>
+    <script>
+        // Updated Newspaper Blog Carousel Functionality
+function initNewspaperCarousels() {
+    const posts = document.querySelectorAll('.featured-post');
+    
+    posts.forEach(post => {
+        const carousel = post.querySelector('.carousel-slides');
+        const slides = post.querySelectorAll('.slide');
+        const dots = post.querySelectorAll('.dot');
+        const prevBtn = post.querySelector('.carousel-prev');
+        const nextBtn = post.querySelector('.carousel-next');
+        
+        let currentIndex = 0;
+        let autoRotateInterval;
+        const totalSlides = slides.length;
+        
+        function updateCarousel() {
+            // Remove active class from all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Add active class to current slide
+            slides[currentIndex].classList.add('active');
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+            
+            // Update transform
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+        
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+        
+        function startAutoRotate() {
+            clearInterval(autoRotateInterval);
+            autoRotateInterval = setInterval(nextSlide, 5000);
+        }
+        
+        function stopAutoRotate() {
+            clearInterval(autoRotateInterval);
+        }
+        
+        // Event listeners
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoRotate();
+            startAutoRotate();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoRotate();
+            startAutoRotate();
+        });
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                stopAutoRotate();
+                startAutoRotate();
+            });
+        });
+        
+        // Initialize
+        updateCarousel();
+        startAutoRotate();
+        
+        // Pause on hover
+        post.addEventListener('mouseenter', stopAutoRotate);
+        post.addEventListener('mouseleave', startAutoRotate);
+    });
+}
+
+// Make sure to call this function when the DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initNewspaperCarousels();
+});
+    </script>
 </section>
-
-
-
-
-
 
 <!-- Products & Projects Section -->
 <section id="products" class="products-section">

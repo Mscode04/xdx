@@ -1,34 +1,4 @@
-// Loading Screen Animation
-document.addEventListener('DOMContentLoaded', function() {
-    const loadingScreen = document.querySelector('.loading-screen');
-    const loadingProgress = document.querySelector('.loading-progress');
-    const mainContent = document.querySelector('.main-content');
-    
-    // Simulate loading progress
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.random() * 10;
-        loadingProgress.style.width = `${Math.min(progress, 100)}%`;
-        
-        if (progress >= 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-                loadingScreen.style.opacity = '0';
-                loadingScreen.style.pointerEvents = 'none';
-                mainContent.style.opacity = '1';
-                
-                // Initialize animations after loading
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                    initAnimations();
-                }, 1000);
-            }, 500);
-        }
-    }, 100);
-    
-    // Initially hide main content
-    mainContent.style.opacity = '0';
-});
+
 
 // Mobile Menu Toggle
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
@@ -424,19 +394,19 @@ function initParticleSystem() {
     });
 }
 
-
-// Blog Carousel Functionality
-function initBlogCarousels() {
-    const blogCards = document.querySelectorAll('.blog-card');
+// Newspaper Blog Carousel Functionality
+function initNewspaperCarousels() {
+    const posts = document.querySelectorAll('.featured-post');
     
-    blogCards.forEach(card => {
-        const carousel = card.querySelector('.carousel-slides');
-        const slides = card.querySelectorAll('.slide');
-        const dots = card.querySelectorAll('.dot');
-        const prevBtn = card.querySelector('.carousel-prev');
-        const nextBtn = card.querySelector('.carousel-next');
+    posts.forEach(post => {
+        const carousel = post.querySelector('.carousel-slides');
+        const slides = post.querySelectorAll('.slide');
+        const dots = post.querySelectorAll('.dot');
+        const prevBtn = post.querySelector('.carousel-prev');
+        const nextBtn = post.querySelector('.carousel-next');
         
         let currentIndex = 0;
+        let autoRotateInterval;
         
         function updateCarousel() {
             carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -460,62 +430,52 @@ function initBlogCarousels() {
             updateCarousel();
         }
         
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
+        function startAutoRotate() {
+            autoRotateInterval = setInterval(nextSlide, 6000);
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoRotate();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoRotate();
+        });
         
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 currentIndex = index;
                 updateCarousel();
+                resetAutoRotate();
             });
         });
         
-        // Auto-rotate carousel
-        let interval = setInterval(nextSlide, 5000);
+        function resetAutoRotate() {
+            clearInterval(autoRotateInterval);
+            startAutoRotate();
+        }
         
-        card.addEventListener('mouseenter', () => {
-            clearInterval(interval);
+        post.addEventListener('mouseenter', () => {
+            clearInterval(autoRotateInterval);
         });
         
-        card.addEventListener('mouseleave', () => {
-            interval = setInterval(nextSlide, 5000);
-        });
+        post.addEventListener('mouseleave', startAutoRotate);
+        
+        // Initialize
+        updateCarousel();
+        startAutoRotate();
     });
-    
-    // Main carousel navigation
-    const carouselContainer = document.querySelector('.carousel-container');
-    const prevNav = document.querySelector('.carousel-nav-prev');
-    const nextNav = document.querySelector('.carousel-nav-next');
-    
-    if (carouselContainer && prevNav && nextNav) {
-        const cardWidth = document.querySelector('.blog-card').offsetWidth;
-        const gap = 30;
-        const scrollAmount = cardWidth + gap;
-        
-        prevNav.addEventListener('click', () => {
-            carouselContainer.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-        
-        nextNav.addEventListener('click', () => {
-            carouselContainer.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-    }
 }
 
-// Update the initAnimations function to include blog carousels
+// Update the initAnimations function
 function initAnimations() {
     // Previous initialization code...
     
-    // Initialize blog carousels
-    initBlogCarousels();
+    // Initialize newspaper carousels
+    initNewspaperCarousels();
 }
-
 
 
 // Team Section Hover Effects

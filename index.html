@@ -13,27 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Fullscreen Loading Animation -->
+    
     <div class="loading-screen">
-        <!-- Replace with your preferred GIF -->
+        
         <img src="https://cdn.dribbble.com/userupload/22537470/file/original-b4ec93a271c77576adc513e043c267e5.gif" 
              alt="Loading..." 
              class="loading-gif">
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const loadingScreen = document.querySelector('.loading-screen');
-            
-            // Hide loading screen after delay (simulate loading)
-            setTimeout(() => {
-                loadingScreen.style.opacity = '0';
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500); // Match this with CSS transition time
-            }, 3000); // 3 seconds loading time - adjust as needed
-        });
-    </script>
 
     <!-- Main Content -->
     <div class="main-content">

@@ -1,0 +1,2317 @@
+# Neuraq Technologies - Premium Website with Advanced UI Elements
+
+Here's the complete code for a cutting-edge, professional website with all the requested animations and UI elements:
+
+## File Structure
+```
+neuraq-technologies/
+├── index.html
+├── css/
+│   ├── style.css
+│   └── animations.css
+├── js/
+│   ├── main.js
+│   ├── scrollEffects.js
+│   └── three.min.js
+└── assets/
+    ├── videos/
+    │   └── loading-bg.mp4
+    ├── images/
+    │   ├── hero-bg.jpg
+    │   └── about-bg.jpg
+    └── fonts/
+        └── (custom font files)
+```
+
+## HTML (index.html)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuraq Technologies | Make Your Online Identity</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <video autoplay muted loop class="loading-video">
+            <source src="assets/videos/loading-bg.mp4" type="video/mp4">
+        </video>
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-part">Neuraq</span>
+                <span class="logo-part">Technologies</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="tech-grid-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">
+                    <span class="logo-icon">
+                        <svg viewBox="0 0 100 100" class="logo-svg">
+                            <path class="logo-path" d="M50 10 L90 50 L50 90 L10 50 Z" />
+                        </svg>
+                    </span>
+                    Neuraq<span>Tech</span>
+                </a>
+                <div class="nav-links">
+                    <div class="nav-item">
+                        <a href="#home" class="nav-link active">
+                            <span class="link-text">Home</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#research" class="nav-link">
+                            <span class="link-text">Research</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">About</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#contact" class="nav-link cta-button">
+                            <span class="link-text">Contact</span>
+                            <div class="link-hover-state"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <div class="menu-icon">
+                        <span class="menu-line top"></span>
+                        <span class="menu-line middle"></span>
+                        <span class="menu-line bottom"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-tech-overlay">
+                <div class="circuit-lines"></div>
+                <div class="floating-tech-elements">
+                    <div class="tech-orb"></div>
+                    <div class="tech-orb"></div>
+                    <div class="tech-orb"></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-tech-background">
+                <div class="particles-js" id="particles-js"></div>
+                <div class="circuit-overlay"></div>
+                <div class="floating-shapes">
+                    <div class="shape hexagon"></div>
+                    <div class="shape triangle"></div>
+                    <div class="shape circle"></div>
+                </div>
+                <div class="data-stream">
+                    <div class="stream-line"></div>
+                    <div class="stream-line"></div>
+                    <div class="stream-line"></div>
+                </div>
+            </div>
+            
+            <div class="hero-holographic">
+                <div class="holographic-card">
+                    <div class="holographic-content">
+                        <h1 class="hero-title">
+                            <span class="title-line"><span class="text-gradient">Redefining</span></span>
+                            <span class="title-line"><span class="text-gradient">Digital Identity</span></span>
+                        </h1>
+                        <p class="hero-subtitle">Make your online identity with our cutting-edge solutions</p>
+                        <div class="hero-cta">
+                            <button class="tech-button primary">
+                                <span class="button-text">Explore Now</span>
+                                <span class="button-hover"></span>
+                                <span class="button-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M5 12H19M12 5L19 12L12 19"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            <button class="tech-button secondary">
+                                <span class="button-text">Get Started</span>
+                                <span class="button-hover"></span>
+                                <span class="button-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 6V12M12 12V18M12 12H18M12 12H6"/>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="holographic-grid"></div>
+                    <div class="holographic-glow"></div>
+                </div>
+            </div>
+            
+            <div class="hero-3d-element">
+                <canvas id="techSphere"></canvas>
+                <div class="interaction-hint">
+                    <span>Drag to rotate</span>
+                    <div class="hint-arrow"></div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-text">Scroll</div>
+                <div class="scroll-line">
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="research-section">
+            <div class="container">
+                <div class="section-header" data-scroll>
+                    <h2 class="section-title">Our Research</h2>
+                    <p class="section-subtitle">Pushing the boundaries of digital identity</p>
+                </div>
+                <div class="research-grid">
+                    <div class="research-card" data-scroll>
+                        <div class="card-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3>Biometric Authentication</h3>
+                        <p>Next-generation security protocols that recognize you.</p>
+                        <div class="tech-button small">
+                            <span class="button-text">Learn More</span>
+                            <span class="button-hover"></span>
+                            <span class="button-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12H19M12 5L19 12L12 19"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="research-card" data-scroll>
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Neural Networks</h3>
+                        <p>AI that adapts to your unique digital footprint.</p>
+                        <div class="tech-button small">
+                            <span class="button-text">Learn More</span>
+                            <span class="button-hover"></span>
+                            <span class="button-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12H19M12 5L19 12L12 19"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="research-card" data-scroll>
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Quantum Encryption</h3>
+                        <p>Unbreakable security for your digital identity.</p>
+                        <div class="tech-button small">
+                            <span class="button-text">Learn More</span>
+                            <span class="button-hover"></span>
+                            <span class="button-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12H19M12 5L19 12L12 19"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="research-tech-overlay">
+                <div class="binary-code">
+                    <span>01001000 01101001 01100111 01101000 00100000 01010100 01100101 01100011 01101000</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-background" data-parallax="scroll" data-image-src="assets/images/about-bg.jpg"></div>
+            <div class="about-tech-overlay">
+                <div class="circuit-node"></div>
+                <div class="circuit-node"></div>
+                <div class="circuit-node"></div>
+            </div>
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text" data-scroll>
+                        <h2 class="section-title">About Neuraq Technologies</h2>
+                        <p>We are pioneers in digital identity solutions, combining cutting-edge AI with revolutionary security protocols to create a seamless online experience that's uniquely yours.</p>
+                        <p>Founded in 2020, our team of experts from cybersecurity, artificial intelligence, and human-computer interaction are dedicated to making your digital identity as natural and secure as your physical presence.</p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="150">0</div>
+                                <div class="stat-label">Experts</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="42">0</div>
+                                <div class="stat-label">Patents</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="500">0</div>
+                                <div class="stat-label">Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image" data-scroll>
+                        <div class="image-container">
+                            <div class="glow-effect"></div>
+                            <div class="tech-grid-lines"></div>
+                            <img src="assets/images/about-tech.png" alt="Neuraq Technology">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">Neuraq<span>Tech</span></a>
+                        <p class="slogan">Make your online identity</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="links-column">
+                            <h4>Company</h4>
+                            <a href="#">About Us</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Press</a>
+                        </div>
+                        <div class="links-column">
+                            <h4>Products</h4>
+                            <a href="#">Neuraq ID</a>
+                            <a href="#">Security Suite</a>
+                            <a href="#">API Solutions</a>
+                            <a href="#">Pricing</a>
+                        </div>
+                        <div class="links-column">
+                            <h4>Resources</h4>
+                            <a href="#">Documentation</a>
+                            <a href="#">Guides</a>
+                            <a href="#">Support</a>
+                            <a href="#">Community</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Neuraq Technologies. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-tech-overlay">
+                <div class="binary-code">
+                    <span>01001110 01100101 01110101 01110010 01100001 01110001 00100000 01010100 01100101 01100011 01101000 01101110 01101111 01101100 01101111 01100111 01101001 01100101 01110011</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrollEffects.js"></script>
+</body>
+</html>
+```
+
+## CSS (style.css)
+```css
+/* Base Styles */
+:root {
+    --primary-color: #6e45e2;
+    --secondary-color: #88d3ce;
+    --dark-color: #0f1021;
+    --darker-color: #0a0b18;
+    --light-color: #f8f9fa;
+    --accent-color: #ff6b6b;
+    --gradient-primary: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+    --gradient-dark: linear-gradient(135deg, #0f1021 0%, #1a1a2e 100%);
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Orbitron', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--darker-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.loading-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+.loading-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.loading-logo {
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-part {
+    display: inline-block;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.logo-part:first-child {
+    font-size: 4rem;
+}
+
+.loading-bar {
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.loading-progress {
+    height: 100%;
+    width: 0;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.tech-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(136, 211, 206, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(136, 211, 206, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background: rgba(15, 16, 33, 0.8);
+    backdrop-filter: blur(10px);
+    --underline-height: 3px;
+    --underline-active: var(--secondary-color);
+}
+
+.navbar.scrolled {
+    padding: 15px 0;
+    background: rgba(15, 16, 33, 0.95);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: var(--font-secondary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-path {
+    fill: none;
+    stroke: url(#logo-gradient);
+    stroke-width: 2;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    animation: drawLogo 2s ease forwards;
+}
+
+@keyframes drawLogo {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.logo span {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.link-text {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.link-underline {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 0;
+    height: var(--underline-height);
+    background: var(--underline-active);
+    transition: all 0.3s ease;
+    border-radius: var(--underline-height);
+}
+
+.nav-link:hover .link-text {
+    transform: translateY(-3px);
+}
+
+.nav-link:hover .link-underline {
+    width: 100%;
+}
+
+.nav-link.active .link-underline {
+    width: 100%;
+}
+
+.link-hover-state {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+.nav-link.cta-button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(110, 69, 226, 0.4);
+    transition: all 0.3s ease;
+}
+
+.nav-link.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(110, 69, 226, 0.6);
+}
+
+.nav-link.cta-button:hover .link-hover-state {
+    opacity: 1;
+}
+
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.menu-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.menu-line.top {
+    top: 0;
+}
+
+.menu-line.middle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-line.bottom {
+    bottom: 0;
+}
+
+.menu-icon.active .top {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-icon.active .middle {
+    opacity: 0;
+}
+
+.menu-icon.active .bottom {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar-tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circuit-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,50 L100,50 M50,0 L50,100" stroke="rgba(110,69,226,0.1)" stroke-width="0.5"/></svg>');
+    background-size: 100px 100px;
+    opacity: 0.3;
+}
+
+.tech-orb {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    filter: blur(1px);
+    animation: floatOrb 15s infinite linear;
+}
+
+.tech-orb:nth-child(1) {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+.tech-orb:nth-child(2) {
+    top: 60%;
+    left: 70%;
+    animation-delay: -5s;
+}
+.tech-orb:nth-child(3) {
+    top: 30%;
+    left: 50%;
+    animation-delay: -10s;
+}
+
+@keyframes floatOrb {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(20px, 10px); }
+    50% { transform: translate(10px, 20px); }
+    75% { transform: translate(-10px, 5px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-tech-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.circuit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,100 M100,0 L0,100" stroke="rgba(136,211,206,0.05)" stroke-width="1"/></svg>');
+    background-size: 100px 100px;
+    opacity: 0.2;
+}
+
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(136, 211, 206, 0.1);
+    border: 1px solid rgba(136, 211, 206, 0.2);
+}
+
+.shape.hexagon {
+    width: 60px;
+    height: 60px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    top: 20%;
+    left: 10%;
+    animation: floatShape 15s infinite ease-in-out;
+}
+
+.shape.triangle {
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: 60%;
+    left: 80%;
+    animation: floatShape 12s infinite ease-in-out reverse;
+}
+
+.shape.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 30%;
+    left: 70%;
+    animation: floatShape 18s infinite ease-in-out;
+}
+
+@keyframes floatShape {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(20px, 15px) rotate(5deg); }
+    50% { transform: translate(10px, 25px) rotate(0deg); }
+    75% { transform: translate(-15px, 10px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.data-stream {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.stream-line {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background: linear-gradient(to bottom, 
+        transparent, 
+        rgba(136, 211, 206, 0.5), 
+        transparent);
+    animation: streamFlow 8s linear infinite;
+    opacity: 0.5;
+}
+
+.stream-line:nth-child(1) {
+    left: 20%;
+    animation-delay: 0s;
+}
+.stream-line:nth-child(2) {
+    left: 50%;
+    animation-delay: -2s;
+}
+.stream-line:nth-child(3) {
+    left: 80%;
+    animation-delay: -4s;
+}
+
+@keyframes streamFlow {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
+
+.hero-holographic {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.holographic-card {
+    position: relative;
+    background: rgba(15, 16, 33, 0.5);
+    border-radius: 20px;
+    padding: 60px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(136, 211, 206, 0.2);
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    width: 100%;
+}
+
+.holographic-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.title-line {
+    display: block;
+    overflow: hidden;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.hero-cta {
+    display: flex;
+    margin-top: 50px;
+}
+
+.holographic-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(136, 211, 206, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(136, 211, 206, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.holographic-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(110, 69, 226, 0.1) 0%, transparent 70%);
+    animation: rotateGlow 20s linear infinite;
+    z-index: -2;
+}
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hero-3d-element {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.interaction-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    opacity: 0.7;
+    animation: pulseText 2s infinite;
+}
+
+.hint-arrow {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Tech Buttons */
+.tech-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.tech-button.small {
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+.tech-button .button-text {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.tech-button .button-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.tech-button .button-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.tech-button .button-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.tech-button.primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(110, 69, 226, 0.4);
+}
+
+.tech-button.secondary {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    margin-left: 15px;
+}
+
+.tech-button:hover .button-text {
+    transform: translateX(5px);
+}
+
+.tech-button:hover .button-hover {
+    opacity: 1;
+}
+
+.tech-button.secondary:hover {
+    color: var(--dark-color);
+}
+
+.tech-button:hover .button-icon {
+    transform: translateX(5px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.scroll-text {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    animation: pulseText 2s infinite;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.scroll-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    animation: scrollDot 2s infinite;
+}
+
+@keyframes scrollDot {
+    0% { top: 0; opacity: 0; }
+    30% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+@keyframes pulseText {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Research Section */
+.research-section {
+    background: var(--darker-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.research-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.research-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.research-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(110, 69, 226, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.research-card:hover:before {
+    opacity: 1;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    background: rgba(136, 211, 206, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.research-card:hover .card-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(136, 211, 206, 0.3);
+}
+
+.research-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.research-card p {
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.research-tech-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.binary-code {
+    position: absolute;
+    white-space: nowrap;
+    font-family: monospace;
+    font-size: 14px;
+    color: rgba(136, 211, 206, 0.1);
+    animation: scrollBinary 30s linear infinite;
+}
+
+@keyframes scrollBinary {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* About Section */
+.about-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.2;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.about-tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.circuit-node {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: pulseNode 3s infinite ease-in-out;
+}
+
+.circuit-node:nth-child(1) {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+.circuit-node:nth-child(2) {
+    top: 60%;
+    left: 70%;
+    animation-delay: -1s;
+}
+.circuit-node:nth-child(3) {
+    top: 30%;
+    left: 50%;
+    animation-delay: -2s;
+}
+
+@keyframes pulseNode {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 1; }
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text {
+    position: relative;
+    z-index: 2;
+}
+
+.about-image {
+    position: relative;
+    z-index: 2;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.glow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(110, 69, 226, 0.4) 0%, transparent 70%);
+    z-index: 1;
+    animation: glowPulse 4s infinite alternate;
+}
+
+.tech-grid-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(136, 211, 206, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(136, 211, 206, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0.4; }
+    100% { opacity: 0.7; }
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Footer */
+.footer-section {
+    background: var(--darker-color);
+    padding: 80px 0 30px;
+    position: relative;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.footer-brand .logo {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.slogan {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.links-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.links-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.links-column a {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.links-column a:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    transition: all 0.3s ease;
+}
+
+.legal-links a:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+.footer-tech-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-3d-element {
+        width: 300px;
+        height: 300px;
+        opacity: 0.6;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+        max-width: 600px;
+        margin: 0 auto 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--darker-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-item {
+        margin: 10px 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+    }
+    
+    .tech-button.secondary {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .hero-3d-element {
+        display: none;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .holographic-card {
+        padding: 40px 20px;
+    }
+    
+    .loading-logo {
+        font-size: 2rem;
+    }
+    
+    .logo-part:first-child {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+}
+```
+
+## CSS (animations.css)
+```css
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 1s ease forwards;
+}
+
+.slide-down {
+    animation: slideDown 1s ease forwards;
+}
+
+.slide-left {
+    animation: slideLeft 1s ease forwards;
+}
+
+.slide-right {
+    animation: slideRight 1s ease forwards;
+}
+
+.scale-in {
+    animation: scaleIn 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from { 
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from { 
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Delays */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+```
+
+## JavaScript (main.js)
+```javascript
+// Loading Screen Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.querySelector('.loading-screen');
+    const loadingProgress = document.querySelector('.loading-progress');
+    const mainContent = document.querySelector('.main-content');
+    
+    // Simulate loading progress
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += Math.random() * 10;
+        loadingProgress.style.width = `${Math.min(progress, 100)}%`;
+        
+        if (progress >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.pointerEvents = 'none';
+                mainContent.style.opacity = '1';
+                
+                // Initialize animations after loading
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    initAnimations();
+                }, 1000);
+            }, 500);
+        }
+    }, 100);
+    
+    // Initially hide main content
+    mainContent.style.opacity = '0';
+});
+
+// Mobile Menu Toggle
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 768) {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.querySelector('.menu-icon').classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        }
+    });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Counter animation for stats
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200;
+    
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+        const increment = target / speed;
+        
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(animateCounters, 1);
+        } else {
+            counter.innerText = target;
+        }
+    });
+}
+
+// Initialize all animations when page loads
+function initAnimations() {
+    // Animate hero elements
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const heroCta = document.querySelector('.hero-cta');
+    
+    heroTitle.classList.add('slide-up');
+    heroSubtitle.classList.add('slide-up', 'delay-1');
+    heroCta.classList.add('slide-up', 'delay-2');
+    
+    // Initialize counter animation when about section is in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('stats-grid')) {
+                    animateCounters();
+                }
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('[data-scroll]').forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Initialize navbar animations
+    initNavbarAnimations();
+    
+    // Initialize 3D tech sphere if available
+    if (document.getElementById('techSphere')) {
+        init3DTechSphere();
+    }
+    
+    // Initialize particle system if available
+    if (document.getElementById('particles-js')) {
+        initParticleSystem();
+    }
+    
+    // Enhanced hover effects for tech buttons
+    const techButtons = document.querySelectorAll('.tech-button');
+    
+    techButtons.forEach(button => {
+        button.addEventListener('mousemove', (e) => {
+            const rect = button.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            gsap.to(button.querySelector('.button-hover'), {
+                x: x - rect.width/2,
+                y: y - rect.height/2,
+                duration: 0.4,
+                ease: 'power2.out'
+            });
+        });
+    });
+}
+
+// Enhanced Navbar Animation
+function initNavbarAnimations() {
+    // Underline animation
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            const underline = link.querySelector('.link-underline');
+            gsap.to(underline, {
+                width: '100%',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+        
+        link.addEventListener('mouseleave', () => {
+            if (!link.classList.contains('active')) {
+                const underline = link.querySelector('.link-underline');
+                gsap.to(underline, {
+                    width: '0%',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            }
+        });
+    });
+}
+
+// 3D Tech Sphere in Hero Section
+function init3DTechSphere() {
+    const canvas = document.getElementById('techSphere');
+    if (!canvas) return;
+    
+    // Set up Three.js scene
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ 
+        canvas: canvas,
+        alpha: true,
+        antialias: true
+    });
+    
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    
+    // Create tech sphere
+    const geometry = new THREE.SphereGeometry(3, 32, 32);
+    const material = new THREE.MeshPhongMaterial({
+        color: 0x6e45e2,
+        emissive: 0x1a1a2e,
+        specular: 0x88d3ce,
+        shininess: 50,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.8
+    });
+    
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
+    
+    // Add lights
+    const ambientLight = new THREE.AmbientLight(0x404040);
+    scene.add(ambientLight);
+    
+    const directionalLight = new THREE.DirectionalLight(0x88d3ce, 1);
+    directionalLight.position.set(1, 1, 1);
+    scene.add(directionalLight);
+    
+    // Add floating tech elements inside sphere
+    const techElements = new THREE.Group();
+    
+    for (let i = 0; i < 50; i++) {
+        const size = Math.random() * 0.1 + 0.05;
+        const geometry = new THREE.IcosahedronGeometry(size, 0);
+        const material = new THREE.MeshBasicMaterial({ 
+            color: Math.random() > 0.5 ? 0x6e45e2 : 0x88d3ce,
+            transparent: true,
+            opacity: 0.7
+        });
+        
+        const element = new THREE.Mesh(geometry, material);
+        
+        // Random position within sphere
+        const radius = Math.random() * 2.5;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.random() * Math.PI;
+        
+        element.position.x = radius * Math.sin(phi) * Math.cos(theta);
+        element.position.y = radius * Math.sin(phi) * Math.sin(theta);
+        element.position.z = radius * Math.cos(phi);
+        
+        element.userData = {
+            speed: Math.random() * 0.01 + 0.005,
+            direction: new THREE.Vector3(
+                Math.random() - 0.5,
+                Math.random() - 0.5,
+                Math.random() - 0.5
+            ).normalize()
+        };
+        
+        techElements.add(element);
+    }
+    
+    sphere.add(techElements);
+    
+    // Position camera
+    camera.position.z = 5;
+    
+    // Mouse interaction
+    let isDragging = false;
+    let previousMousePosition = { x: 0, y: 0 };
+    
+    canvas.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        previousMousePosition = {
+            x: e.offsetX,
+            y: e.offsetY
+        };
+    });
+    
+    window.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+    
+    canvas.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        
+        const deltaMove = {
+            x: e.offsetX - previousMousePosition.x,
+            y: e.offsetY - previousMousePosition.y
+        };
+        
+        sphere.rotation.y += deltaMove.x * 0.01;
+        sphere.rotation.x += deltaMove.y * 0.01;
+        
+        previousMousePosition = {
+            x: e.offsetX,
+            y: e.offsetY
+        };
+    });
+    
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+        
+        // Rotate sphere slowly when not interacting
+        if (!isDragging) {
+            sphere.rotation.y += 0.002;
+            sphere.rotation.x += 0.001;
+        }
+        
+        // Animate floating elements
+        techElements.children.forEach(element => {
+            element.position.add(
+                element.userData.direction.clone().multiplyScalar(element.userData.speed)
+            );
+            
+            // Keep elements within sphere
+            if (element.position.length() > 2.5) {
+                element.position.normalize().multiplyScalar(2.5);
+                element.userData.direction.negate();
+            }
+        });
+        
+        renderer.render(scene, camera);
+    }
+    
+    // Handle resize
+    window.addEventListener('resize', () => {
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    });
+    
+    animate();
+}
+
+// Particle System for Hero Background
+function initParticleSystem() {
+    if (!document.getElementById('particles-js')) return;
+    
+    particlesJS('particles-js', {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#88d3ce"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 2,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#6e45e2",
+                "opacity": 0.2,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": true,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 0.5
+                    }
+                },
+                "push": {
+                    "particles_nb": 4
+                }
+            }
+        },
+        "retina_detect": true
+    });
+}
+```
+
+## JavaScript (scrollEffects.js)
+```javascript
+// Parallax Effects
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Parallax background effects
+    const parallaxElements = document.querySelectorAll('[data-parallax="scroll"]');
+    
+    parallaxElements.forEach(el => {
+        const speed = parseFloat(el.getAttribute('data-speed')) || 0.3;
+        
+        gsap.to(el, {
+            y: (i, target) => scrollY * speed,
+            ease: "none",
+            scrollTrigger: {
+                trigger: el.parentElement,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+    });
+    
+    // Animate elements on scroll with GSAP
+    gsap.utils.toArray('[data-scroll]').forEach(element => {
+        const direction = element.getAttribute('data-direction') || 'up';
+        const distance = element.getAttribute('data-distance') || 50;
+        const duration = element.getAttribute('data-duration') || 1;
+        const delay = element.getAttribute('data-delay') || 0;
+        
+        let animationProps = {};
+        
+        switch(direction) {
+            case 'up':
+                animationProps = { y: distance, opacity: 0 };
+                break;
+            case 'down':
+                animationProps = { y: -distance, opacity: 0 };
+                break;
+            case 'left':
+                animationProps = { x: distance, opacity: 0 };
+                break;
+            case 'right':
+                animationProps = { x: -distance, opacity: 0 };
+                break;
+            case 'scale':
+                animationProps = { scale: 0.8, opacity: 0 };
+                break;
+            default:
+                animationProps = { y: distance, opacity: 0 };
+        }
+        
+        gsap.from(element, {
+            ...animationProps,
+            duration: duration,
+            delay: delay,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+    });
+    
+    // More complex animations for hero section
+    const heroTitleLines = gsap.utils.toArray('.title-line');
+    
+    heroTitleLines.forEach((line, i) => {
+        gsap.from(line, {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            delay: i * 0.2,
+            ease: "power3.out"
+        });
+    });
+    
+    // Research card stagger animation
+    const researchCards = gsap.utils.toArray('.research-card');
+    
+    gsap.from(researchCards, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: '.research-grid',
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+    
+    // About section animation
+    gsap.from('.about-text', {
+        x: -50,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.about-section',
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+    
+    gsap.from('.about-image', {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.about-section',
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+    
+    // Glow effect animation
+    const glowEffect = document.querySelector('.glow-effect');
+    if (glowEffect) {
+        gsap.to(glowEffect, {
+            scale: 1.1,
+            opacity: 0.7,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+    }
+});
+```
+
+## Implementation Notes
+
+1. **Professional UI Elements Added**:
+   - Interactive 3D tech sphere with Three.js
+   - Particle.js background with interactive elements
+   - Animated circuit board patterns
+   - Floating tech orbs with glow effects
+   - Data stream animations
+
+2. **Enhanced Navigation**:
+   - Animated underline effect on hover
+   - Glowing active state
+   - Responsive mega menu with smooth transitions
+   - Tech-inspired logo animation
+
+3. **Premium Hero Section**:
+   - Holographic card with grid overlay
+   - Advanced button hover effects
+   - Interactive 3D element
+   - Professional scroll indicator
+
+4. **Research Section**:
+   - Animated tech cards with hover effects
+   - Binary code scrolling in background
+   - Staggered entrance animations
+
+5. **About Section**:
+   - Circuit node animations
+   - Glowing tech elements
+   - Animated statistics counters
+   - Responsive layout
+
+6. **Performance Optimizations**:
+   - Efficient animations using GSAP and ScrollTrigger
+   - Hardware-accelerated CSS transforms
+   - Optimized Three.js rendering
+   - Responsive design for all devices
+
+This implementation creates a truly professional, high-tech website that will impress visitors and effectively communicate Neuraq Technologies' innovative brand identity. The animations are smooth and performant, using hardware acceleration where possible.
+
+
+
+
+i need a blog page for this site with same theme the navbar and fooetr not need that i take from that,
+need images like carosal and some blod , when click on each card show in detail, like a modal,this is one of the pages in about ebsite

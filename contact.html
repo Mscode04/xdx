@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Neuraq Technologies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    /* Contact Page Specific Styles */
+.contact-hero-section {
+    height: 70vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-tech-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.contact-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-hero-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.contact-hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form-section {
+    position: relative;
+    padding: 100px 0;
+    background: var(--darker-color);
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info {
+    padding: 30px;
+}
+
+.contact-description {
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.contact-methods {
+    margin-bottom: 50px;
+}
+
+.contact-method {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.method-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(136, 211, 206, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.method-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.method-details p {
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.social-links h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-3px);
+    color: white;
+}
+
+.contact-form-container {
+    position: relative;
+}
+
+.tech-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.tech-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.input-container {
+    position: relative;
+}
+
+.tech-form input,
+.tech-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-family: var(--font-primary);
+    transition: all 0.3s ease;
+}
+
+.tech-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.tech-form input:focus,
+.tech-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(136, 211, 206, 0.2);
+}
+
+.input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.tech-button.full-width {
+    width: 100%;
+}
+
+.tech-button.large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+.contact-tech-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Map Section */
+.map-section {
+    padding: 80px 0;
+    background: var(--dark-color);
+}
+
+.tech-map-container {
+    margin-top: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.map-frame {
+    position: relative;
+    height: 500px;
+    background: var(--darker-color);
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.map-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(136, 211, 206, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(136, 211, 206, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+}
+
+.map-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.pin-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.pin-icon i {
+    transform: rotate(45deg);
+}
+
+.pulse-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* CTA Section */
+.contact-cta-section {
+    padding: 100px 0;
+    background: var(--gradient-dark);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Notification */
+.tech-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(15, 16, 33, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 350px;
+}
+
+.tech-notification.success {
+    border-left-color: #4CAF50;
+}
+
+.notification-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF50;
+    flex-shrink: 0;
+}
+
+.notification-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+.notification-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.notification-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .contact-hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+    
+    .contact-form-container {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .contact-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .method-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .map-frame {
+        height: 400px;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .contact-hero-section {
+        min-height: 500px;
+    }
+    
+    .method-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-right: 15px;
+    }
+    
+    .tech-notification {
+        max-width: calc(100% - 40px);
+    }
+}
+</style>
+<body>
+    
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navigation (same as index.html) -->
+         <nav class="navbar">
+            <div class="container d-flex flex-row" style="display: flex; justify-content: space-between">
+                <a href="#" class="logo">
+                  <img src="assets/images/logo.png" alt=""  class="logo" style="width: 150px;">
+                </a>
+                <div class="nav-links">
+                    <div class="nav-item">
+                        <a href="#home" class="nav-link active">
+                            <span class="link-text">Home</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">About</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">Care</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">Innovations</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#contact" class="nav-link cta-button">
+                            <span class="link-text" style="color: black;">Contact</span>
+                            <div class="link-hover-state"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <div class="menu-icon">
+                        <span class="menu-line top"></span>
+                        <span class="menu-line middle"></span>
+                        <span class="menu-line bottom"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-tech-overlay">
+          
+            </div>
+        </nav>
+
+        <!-- Contact Hero Section -->
+        <section class="contact-hero-section">
+            <div class="contact-tech-background">
+                <div class="particles-js" id="contact-particles"></div>
+                <div class="circuit-overlay"></div>
+                <div class="data-stream">
+                    <div class="stream-line"></div>
+                    <div class="stream-line"></div>
+                    <div class="stream-line"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h1 class="contact-hero-title">
+                        <span class="title-line"><span class="text-gradient">Get In Touch</span></span>
+                        <span class="title-line"><span class="text-gradient">With Our Team</span></span>
+                    </h1>
+                    <p class="contact-hero-subtitle">We're here to answer your questions and discuss how Neuraq can transform your digital identity.</p>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-text">Scroll</div>
+                <div class="scroll-line">
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-form-grid">
+                    <div class="contact-info" data-scroll>
+                        <h2 class="section-title">Contact Information</h2>
+                        <p class="contact-description">Feel free to reach out to us through any of these channels or fill out the form for a quicker response.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Headquarters</h3>
+                                    <p>123 Tech Park Drive<br>San Francisco, CA 94107</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Phone</h3>
+                                    <p>+1 (555) 123-4567<br>Mon-Fri, 9am-5pm PST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Email</h3>
+                                    <p>info@neuraqtech.com<br>support@neuraqtech.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h3>Follow Us</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container" data-scroll>
+                        <div class="holographic-card">
+                            <div class="holographic-content">
+                                <h2 class="form-title">Send Us a Message</h2>
+                                <form id="contactForm" class="tech-form">
+                                    <div class="form-group">
+                                        <label for="name">Your Name</label>
+                                        <div class="input-container">
+                                            <input type="text" id="name" name="name" required>
+                                            <div class="input-highlight"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <div class="input-container">
+                                            <input type="email" id="email" name="email" required>
+                                            <div class="input-highlight"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <div class="input-container">
+                                            <input type="text" id="subject" name="subject" required>
+                                            <div class="input-highlight"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="message">Your Message</label>
+                                        <div class="input-container">
+                                            <textarea id="message" name="message" rows="5" required></textarea>
+                                            <div class="input-highlight"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="submit" class="tech-button primary full-width">
+                                        <span class="button-text">Send Message</span>
+                                        <span class="button-hover"></span>
+                                        <span class="button-icon">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="holographic-grid"></div>
+                            <div class="holographic-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-tech-overlay">
+                <div class="binary-code">
+                    <span>01000011 01101111 01101110 01110100 01100001 01100011 01110100 00100000 01001110 01100101 01110101 01110010 01100001 01110001 00100000 01010100 01100101 01100011 01101000 01101110 01101111 01101100 01101111 01100111 01101001 01100101 01110011</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section" data-scroll>
+            <div class="container">
+                <h2 class="section-title">Our Location</h2>
+                <div class="tech-map-container">
+                    <div class="map-frame">
+                        <!-- Embedded map would go here -->
+                        <div class="map-placeholder">
+                            <div class="map-grid-overlay"></div>
+                            <div class="map-pin">
+                                <div class="pin-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="pulse-effect"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="contact-cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Digital Identity?</h2>
+                    <p class="cta-subtitle">Schedule a consultation with our experts to discuss your needs.</p>
+                    <button class="tech-button primary large">
+                        <span class="button-text">Book a Meeting</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (same as index.html) -->
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                           <img src="assets/images/logo.png" alt=""  class="logo" style="width: 150px;">
+                        <p class="slogan">Make your online identity</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="links-column">
+                            <h4>Company</h4>
+                            <a href="about.html">About Us</a>
+                            <a href="careers.html">Careers</a>
+                            
+                            <a href="#">Team</a>
+                        </div>
+                        <div class="links-column">
+                            <h4>Products</h4>
+                            <a href="#">Neu Products</a>
+                            <a href="#">Smart Care App</a>
+                            <a href="#">Ne-Com</a>
+                            <a href="#">SPH Ai</a>
+                        </div>
+                        <div class="links-column">
+                            <h4>Resources</h4>
+                            <a href="contact.html">Support</a>
+                            <a href="#">Community</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Neuraq Technologies. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <!-- <a href="#">Cookies</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-tech-overlay">
+                <div class="binary-code">
+                    <span>01001110 01100101 01110101 01110010 01100001 01110001 00100000 01010100 01100101 01100011 01101000 01101110 01101111 01101100 01101111 01100111 01101001 01100101 01110011</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrollEffects.js"></script>
+    <script>
+        // Initialize contact page specific elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form input animations
+            const inputs = document.querySelectorAll('.input-container input, .input-container textarea');
+            
+            inputs.forEach(input => {
+                const highlight = input.parentElement.querySelector('.input-highlight');
+                
+                input.addEventListener('focus', () => {
+                    highlight.style.width = '100%';
+                    highlight.style.opacity = '1';
+                });
+                
+                input.addEventListener('blur', () => {
+                    highlight.style.width = '0%';
+                    highlight.style.opacity = '0';
+                });
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Here you would normally send the form data to your server
+                    // For demo purposes, we'll just show a success message
+                    
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitButton.querySelector('.button-text').textContent;
+                    
+                    submitButton.querySelector('.button-text').textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    // Simulate API call
+                    setTimeout(() => {
+                        submitButton.querySelector('.button-text').textContent = 'Message Sent!';
+                        
+                        // Reset form
+                        setTimeout(() => {
+                            contactForm.reset();
+                            submitButton.querySelector('.button-text').textContent = originalText;
+                            submitButton.disabled = false;
+                            
+                            // Show success notification
+                            const notification = document.createElement('div');
+                            notification.className = 'tech-notification success';
+                            notification.innerHTML = `
+                                <div class="notification-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                        <path d="M22 4L12 14.01l-3-3"/>
+                                    </svg>
+                                </div>
+                                <div class="notification-content">
+                                    <h4>Success!</h4>
+                                    <p>Your message has been sent successfully.</p>
+                                </div>
+                            `;
+                            
+                            document.body.appendChild(notification);
+                            
+                            // Animate in
+                            gsap.from(notification, {
+                                y: 50,
+                                opacity: 0,
+                                duration: 0.5,
+                                ease: "power2.out"
+                            });
+                            
+                            // Remove after delay
+                            setTimeout(() => {
+                                gsap.to(notification, {
+                                    y: -50,
+                                    opacity: 0,
+                                    duration: 0.5,
+                                    ease: "power2.in",
+                                    onComplete: () => notification.remove()
+                                });
+                            }, 5000);
+                        }, 1000);
+                    }, 1500);
+                });
+            }
+            
+            // Initialize particle system for contact page
+            if (document.getElementById('contact-particles')) {
+                particlesJS('contact-particles', {
+                    "particles": {
+                        "number": {
+                            "value": 60,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#6e45e2"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": true,
+                            "anim": {
+                                "enable": true,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": true,
+                                "speed": 2,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#88d3ce",
+                            "opacity": 0.2,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 1,
+                            "direction": "none",
+                            "random": true,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": true,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 0.5
+                                }
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+        });
+    </script>
+</body>
+</html>

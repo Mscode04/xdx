@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Neuraq Technologies | Make Your Online Identity</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <style>
+    /* Founder Story Section */
+.founder-story-section {
+    padding: 100px 0;
+    position: relative;
+    background: var(--darker-color);
+}
+
+.founder-tech-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.founder-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.founder-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.founder-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.founder-text {
+    position: relative;
+}
+
+.founder-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.founder-quote:before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -15px;
+    font-size: 4rem;
+    color: var(--secondary-color);
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.signature {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.signature img {
+    height: 50px;
+}
+
+.signature p {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Initiative Section */
+.initiative-section {
+    padding: 100px 0;
+    position: relative;
+    background: var(--dark-color);
+}
+
+.initiative-tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.initiative-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.problem-card, .solution-card {
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.problem-card {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.solution-card {
+    background: rgba(136, 211, 206, 0.1);
+    border: 1px solid rgba(136, 211, 206, 0.2);
+}
+
+.problem-list {
+    list-style-type: none;
+}
+
+.problem-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.problem-list li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.solution-features {
+    display: grid;
+    gap: 20px;
+}
+
+.feature {
+    display: flex;
+    gap: 15px;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(136, 211, 206, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--secondary-color);
+}
+
+.feature-text h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.initiative-cta {
+    text-align: center;
+    margin-top: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.initiative-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 100px 0;
+    background: var(--darker-color);
+}
+
+.impact-stories {
+    display: grid;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.impact-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.impact-story:nth-child(even) {
+    direction: rtl;
+}
+
+.impact-story:nth-child(even) .story-text {
+    direction: ltr;
+}
+
+.story-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.story-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Awards Section */
+.awards-section {
+    padding: 100px 0;
+    position: relative;
+    background: var(--dark-color);
+}
+
+.awards-tech-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.award-card {
+    display: grid;
+    grid-template-columns: 100px 1fr 300px;
+    gap: 40px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+}
+
+.award-badge {
+    width: 100px;
+    height: 100px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.award-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.award-event {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.award-date {
+    opacity: 0.8;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.award-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.award-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .founder-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .initiative-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .award-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .award-badge {
+        margin: 0 auto;
+    }
+    
+    .award-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .impact-story {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-story:nth-child(even) {
+        direction: ltr;
+    }
+    
+    .award-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .founder-quote {
+        font-size: 1.2rem;
+    }
+    
+    .initiative-cta p {
+        font-size: 1rem;
+    }
+    
+    .problem-card, .solution-card {
+        padding: 25px;
+    }
+}
+   </style>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navigation (same as index.html) -->
+         <nav class="navbar">
+            <div class="container d-flex flex-row" style="display: flex; justify-content: space-between">
+                <a href="#" class="logo">
+                  <img src="assets/images/logo.png" alt=""  class="logo" style="width: 150px;">
+                </a>
+                <div class="nav-links">
+                    <div class="nav-item">
+                        <a href="#home" class="nav-link active">
+                            <span class="link-text">Home</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">About</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">Care</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-text">Innovations</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#contact" class="nav-link cta-button">
+                            <span class="link-text" style="color: black;">Contact</span>
+                            <div class="link-hover-state"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <div class="menu-icon">
+                        <span class="menu-line top"></span>
+                        <span class="menu-line middle"></span>
+                        <span class="menu-line bottom"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-tech-overlay">
+          
+            </div>
+        </nav>
+        <!-- Founder's Story Section -->
+        <section class="founder-story-section">
+            <div class="founder-tech-background">
+                <div class="particles-js" id="founder-particles-js"></div>
+                <div class="circuit-overlay"></div>
+                <div class="floating-shapes">
+                    <div class="shape hexagon"></div>
+                    <div class="shape triangle"></div>
+                    <div class="shape circle"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="founder-content">
+                    <div class="founder-image" data-scroll>
+                        <div class="image-container">
+                            <div class="glow-effect"></div>
+                            <div class="tech-grid-lines"></div>
+                            <img src="assets/images/shaheen.jpg" alt="Shaheen K.P., Founder">
+                        </div>
+                    </div>
+                    <div class="founder-text" data-scroll>
+                        <h2 class="section-title">The Unyielding Spirit of Neuraq</h2>
+                        <p class="founder-quote">"Neuraq is more than a company—it's a living testament to what belief can achieve. Belief in technology. Belief in purpose."</p>
+                        <p>In the luminous dawn of 2024, a bold and visionary 19-year-old, Shaheen K.P., embarked on a transformative journey that would give birth to Neuraq Technologies. What began as a youthful dream soon evolved into a vibrant digital movement, driven by a belief in technology's power not just to innovate, but to uplift.</p>
+                        <p>His journey, marked by thoughtful pauses and quiet resilience, echoes a deeper truth: that strength is often sculpted not by the absence of obstacles, but by the unwavering pursuit of vision despite them.</p>
+                        <div class="signature">
+                            <img src="assets/images/signature.png" alt="Shaheen's Signature">
+                            <p>Shaheen K.P.<br>Founder & CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Timeline Section -->
+        <section class="journey-section">
+            <div class="container">
+                <div class="section-header" data-scroll>
+                    <h2 class="section-title">Our Journey</h2>
+                    <p class="section-subtitle">From vision to reality</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item" data-scroll>
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h3>Humble Beginnings</h3>
+                            <p>Founded by Shaheen K.P. at age 19 with a vision to combine technology with social impact. Assembled a core team with limited resources but boundless ambition.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/early-days.jpg" alt="Early Days">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-scroll>
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <h3>First Breakthrough</h3>
+                            <p>Launched the "Smart Care App" in collaboration with Makkaraparamba Palliative Care, demonstrating our commitment to socially impactful technology.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/smart-care-launch.jpg" alt="Smart Care App Launch">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-scroll>
+                        <div class="timeline-date">July 2025</div>
+                        <div class="timeline-content">
+                            <h3>Promising Startup Award</h3>
+                            <p>Honored with the Promising Startup Award at the Promising Kerala Entrepreneurs Awards, validating our innovative approach and meaningful solutions.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/award-ceremony.jpg" alt="Award Ceremony">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-scroll>
+                        <div class="timeline-date">Present</div>
+                        <div class="timeline-content">
+                            <h3>AwaazNet Initiative</h3>
+                            <p>Developing groundbreaking communication-assistive technology to help individuals with speech challenges, embodying our commitment to inclusive innovation.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/awaaznet-research.jpg" alt="AwaazNet Research">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AwaazNet Initiative Section -->
+        <section class="initiative-section">
+            <div class="initiative-tech-overlay">
+                <div class="circuit-node"></div>
+                <div class="circuit-node"></div>
+                <div class="circuit-node"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header" data-scroll>
+                    <h2 class="section-title">AwaazNet Initiative</h2>
+                    <p class="section-subtitle">Breaking communication barriers with AI</p>
+                </div>
+                
+                <div class="initiative-grid">
+                    <div class="problem-card" data-scroll>
+                        <div class="card-icon">
+                            <i class="fas fa-comment-slash"></i>
+                        </div>
+                        <h3>The Problem</h3>
+                        <ul class="problem-list">
+                            <li>Lack of continuous monitoring and feedback for speech therapy</li>
+                            <li>Limited access to personalized exercises</li>
+                            <li>Delayed intervention for speech challenges</li>
+                            <li>Social anxiety and reduced confidence</li>
+                            <li>Difficulty with pronunciation in language learning</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="solution-card" data-scroll>
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Our Solution</h3>
+                        <div class="solution-features">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-microphone-alt"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Continuous Voice Analysis</h4>
+                                    <p>Real-time monitoring of speech patterns and disfluencies</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Personalized Exercises</h4>
+                                    <p>Tailored activities based on individual speech patterns</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-language"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Multilingual Support</h4>
+                                    <p>Currently supporting English and Malayalam with more to come</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Progress Tracking</h4>
+                                    <p>Detailed analytics to monitor improvement over time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="initiative-cta" data-scroll>
+                    <p>We envision a future where communication barriers no longer exist—where every voice, regardless of its challenges, is heard clearly and confidently.</p>
+                    <button class="tech-button primary">
+                        <span class="button-text">Learn More About AwaazNet</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12H19M12 5L19 12L12 19"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact-section">
+            <div class="container">
+                <div class="section-header" data-scroll>
+                    <h2 class="section-title">Our Impact</h2>
+                    <p class="section-subtitle">Technology with purpose</p>
+                </div>
+                
+                <div class="impact-stories">
+                    <div class="impact-story" data-scroll>
+                        <div class="story-image">
+                            <img src="assets/images/palliative-care.jpg" alt="Palliative Care">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="story-text">
+                            <h3>Smart Care App</h3>
+                            <p>Developed in collaboration with Makkaraparamba Palliative Care, this intuitive solution supports caregivers and medical professionals in managing patients more effectively, enhancing quality of life for those in need.</p>
+                            <p>The app's unveiling at the 'Arike' event was graced by Mr. Muhammad Musthafa and Dr. P. Unneen, underscoring its significance in healthcare innovation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-story" data-scroll>
+                        <div class="story-text">
+                            <h3>Educational Transformation</h3>
+                            <p>We've built digital infrastructures for schools that revolutionize learning experiences, making education more accessible and engaging through technology.</p>
+                            <p>Our platforms enable seamless communication between students, teachers, and parents while providing analytics to improve educational outcomes.</p>
+                        </div>
+                        <div class="story-image">
+                            <img src="assets/images/education-tech.jpg" alt="Education Technology">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards-section">
+            <div class="awards-tech-overlay">
+                <div class="binary-code">
+                    <span>01000001 01110111 01100001 01110010 01100100 00100000 01010111 01101001 01101110 01101110 01100101 01110010 01110011 00100000 00110010 00110000 00110010 00110101</span>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header" data-scroll>
+                    <h2 class="section-title">Recognition</h2>
+                    <p class="section-subtitle">Celebrating our achievements</p>
+                </div>
+                
+                <div class="award-card" data-scroll>
+                    <div class="award-badge">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-content">
+                        <h3>Promising Startup Award 2025</h3>
+                        <p class="award-event">Promising Kerala Entrepreneurs Awards</p>
+                        <p class="award-date">July 5, 2025 | Kochi, Kerala</p>
+                        <p class="award-description">This recognition celebrates innovation, resilience, and the entrepreneurial spirit—and we're proud to stand among Kerala's most inspiring startups. For us at Neuraq, this award is more than a symbol—it's a powerful validation of the hard work, sleepless nights, and unwavering belief in our mission.</p>
+                    </div>
+                    <div class="award-image">
+                        <img src="assets/images/award-trophy.jpg" alt="Promising Startup Award">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header" data-scroll>
+                    <h2 class="section-title">Our Team</h2>
+                    <p class="section-subtitle">The brilliant minds behind our technology</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member" data-scroll>
+                        <div class="member-image">
+                            <img src="assets/images/shaheen-team.jpg" alt="Shaheen K.P.">
+                            <div class="image-overlay"></div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h3>Shaheen K.P.</h3>
+                        <p class="position">Founder & CEO</p>
+                        <p class="bio">Visionary leader with a passion for socially impactful technology and inclusive innovation.</p>
+                    </div>
+                    
+                    <div class="team-member" data-scroll>
+                        <div class="member-image">
+                            <img src="assets/images/cto.jpg" alt="CTO">
+                            <div class="image-overlay"></div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Rajesh Menon</h3>
+                        <p class="position">Chief Technology Officer</p>
+                        <p class="bio">AI and machine learning expert leading our technical innovation.</p>
+                    </div>
+                    
+                    <div class="team-member" data-scroll>
+                        <div class="member-image">
+                            <img src="assets/images/lead-dev.jpg" alt="Lead Developer">
+                            <div class="image-overlay"></div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Priya Nair</h3>
+                        <p class="position">Lead Developer</p>
+                        <p class="bio">Full-stack developer specializing in accessible user interfaces.</p>
+                    </div>
+                    
+                    <div class="team-member" data-scroll>
+                        <div class="member-image">
+                            <img src="assets/images/speech-specialist.jpg" alt="Speech Specialist">
+                            <div class="image-overlay"></div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h3>Dr. Anjali Kumar</h3>
+                        <p class="position">Speech Therapy Specialist</p>
+                        <p class="bio">Leading our AwaazNet initiative with clinical expertise.</p>
+                    </div>
+                </div>
+                
+                <div class="team-cta" data-scroll>
+                    <h3>Join Our Mission</h3>
+                    <p>We're always looking for passionate individuals to join our team.</p>
+                    <button class="tech-button primary">
+                        <span class="button-text">View Career Opportunities</span>
+                        <span class="button-hover"></span>
+                        <span class="button-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 12H19M12 5L19 12L12 19"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (same as index.html) -->
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                           <img src="assets/images/logo.png" alt=""  class="logo" style="width: 150px;">
+                        <p class="slogan">Make your online identity</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="links-column">
+                            <h4>Company</h4>
+                            <a href="about.html">About Us</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Team</a>
+                        </div>
+                        <div class="links-column">
+                            <h4>Products</h4>
+                            <a href="#">Neu Products</a>
+                            <a href="#">Smart Care App</a>
+                            <a href="#">Ne-Com</a>
+                            <a href="#">SPH Ai</a>
+                        </div>
+                        <div class="links-column">
+                            <h4>Resources</h4>
+                            <a href="#">Support</a>
+                            <a href="#">Community</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Neuraq Technologies. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <!-- <a href="#">Cookies</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-tech-overlay">
+                <div class="binary-code">
+                    <span>01001110 01100101 01110101 01110010 01100001 01110001 00100000 01010100 01100101 01100011 01101000 01101110 01101111 01101100 01101111 01100111 01101001 01100101 01110011</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrollEffects.js"></script>
+</body>
+</html>

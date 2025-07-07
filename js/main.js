@@ -1,14 +1,4 @@
-        document.addEventListener('DOMContentLoaded', function() {
-            const loadingScreen = document.querySelector('.loading-screen');
-            
-            // Hide loading screen after delay (simulate loading)
-            setTimeout(() => {
-                loadingScreen.style.opacity = '0';
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500); // Match this with CSS transition time
-            }, 3000); // 3 seconds loading time - adjust as needed
-        });
+
 
 // Mobile Menu Toggle
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
